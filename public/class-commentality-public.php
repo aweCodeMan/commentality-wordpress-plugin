@@ -104,7 +104,7 @@ class Commentality_Public {
         add_shortcode('commentality', function ($attributes){
             if($attributes['id']){
                 $url = "https://frontmentality.djnd.si/embed.html#id={$attributes['id']}";
-                echo "<iframe id='commentality' width='100%' height='1000' src='{$url}' frameborder='0' class='commentality'></iframe>";
+                echo "<iframe id='commentality' width='100%' src='{$url}' frameborder='0' onload='commentalityResizeHeight()'></iframe>";
             }
        });
 	}
